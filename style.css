@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20;
+    padding: 20;
+  }
+  h1 {
+    margin: 20px 0;
+    text-align: center;
+  }
+  .Object {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  label {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  input[type="number"] {
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    width: 200px;
+    text-align: center;
+    outline: none;
+  }
+  input[type="number"]:focus {
+    border: 2px solid #007bff;
+  }
+  button {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 24px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  button:hover {
+    background-color: #0062cc;
+  }
+  #numberOutput {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  #randomDay {
+    text-align: center;
+  }
+  #result {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;        
+  }
+  #randomBirthday {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;  
+  }
