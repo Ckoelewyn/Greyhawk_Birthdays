@@ -12,7 +12,7 @@
         margin: 20px 0;
         text-align: center;
       }
-      form {
+      .Object {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -59,6 +59,11 @@
         text-align: center;
         margin-top: 20px;        
       }
+      #randomBirthday {
+        font-size: 24px;
+        text-align: center;
+        margin-top: 20px;  
+      }
     </style>
   </head>
   <body>
@@ -73,9 +78,10 @@
     </div>
     <div class="Object">
         <h1>Random Birthday Generator</h1>
-        <p>Gives you a random day for the tool above</p>
+        <p>Gives you a random day if you don't want to roll in foundry with your friends</p>
         <button type="button" onclick="generateRandomNumber()">Generate</button>
         <p id="result"></p>
+        <p id="randomBirthday"></p>
     </div>
 
     <script>
@@ -83,6 +89,9 @@
         const numberInput = document.getElementById("numberInput");
         const numberOutput = document.getElementById("numberOutput");
         const number = numberInput.value;
+        numberOutput.textContent = generateBirthdayString(number);
+      }
+      function generateBirthdayString(number){
         let month = "";
         let weekday = "";
         let monthday = "";
@@ -185,13 +194,14 @@
                 break;
         }
         let isHoliday = Holiday ? "You were born during a Holiday! " : "";
-        numberOutput.textContent = `${isHoliday}Your Birthday was ${weekday}, the ${monthday} of ${month} `;
+        return `${isHoliday}Your Birthday was ${weekday}, the ${monthday} of ${month} `
       }
       function generateRandomNumber() {
         const min = 1;
         const max = 364;
         const random = Math.floor(Math.random() * (max - min + 1)) + min;
         document.getElementById("result").innerHTML = "Your random number is: " + random;
+        document.getElementById("randomBirthday").innerHTML = generateBirthdayString(random);
       }
     </script>
   </body>
